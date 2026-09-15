@@ -79,7 +79,12 @@ export default function App() {
   }
 
   const grouped: Record<LiveState['section'], Camp[]> = { Open: [], Upcoming: [], Closed: [] }
-  for (const camp of camps) grouped[getLiveState(camp, now).section].push(camp)
+  for (const camp of camps) {
+    const section = getLiveState(camp, now).section
+    const closedAt = camp.closeAt ? new Date(camp.closeAt).getTime() : undefined
+    if (section === 'Closed' && (closedAt === undefined || now - closedAt > 7 * DAY)) continue
+    grouped[section].push(camp)
+  }
 
   return <main>
     <div className="title-row"><div><h1>Camp & Competition List</h1><p className="sub">Engineering • Computer • AI • Robotics • Hackathon • Science • Business</p><p className="updated">Last updated: 15 Sep 2026 · Status refreshes every minute</p></div><aside className="sponsor" aria-label="Sponsor"><img src="./2b2t-th.png" alt="2b2t-th" /><div><span>Sponsored by</span><strong>2b2t-th</strong><p>IP: <button className="ip-copy" onClick={() => void copyIp()}>2b2t-th.org</button> · 1.21.11–26.2 {copied ? <b className="copied" role="status">Copied!</b> : null}</p></div></aside></div>
