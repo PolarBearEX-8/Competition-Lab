@@ -23,9 +23,9 @@ export function getLiveState(camp: Camp, now: number): LiveState {
   if (camp.registrationState === 'closed') return { label: 'Closed', className: 'closed', section: 'Closed' }
   if (closes !== undefined) {
     const remaining = closes - now
-    if (remaining <= 7 * DAY) return { label: countdown('Close', remaining), className: 'soon', section: 'Open' }
+    return { label: countdown('Close', remaining), className: remaining <= 7 * DAY ? 'soon' : 'open', section: 'Open' }
   }
-  return { label: closes === undefined ? 'Open / Unknown deadline' : 'Open', className: 'open', section: 'Open' }
+  return { label: 'Open / Unknown deadline', className: 'open', section: 'Open' }
 }
 
 function ExternalLink({ href, children }: { href: string; children: ReactNode }) {
