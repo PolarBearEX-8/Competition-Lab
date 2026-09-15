@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camp & Competition List</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --line: #e7e7e7;
+      --soft: #f8f8f8;
+      --open: #137333;
+      --soon: #b06000;
+      --closed: #b3261e;
+      --unknown: #555;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    main {
+      width: min(1400px, calc(100% - 32px));
+      margin: 28px auto;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 6px;
+      font-weight: 700;
+    }
+    .sub {
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-size: 13px;
+    }
+    .table-wrap {
+      border-top: 1px solid var(--line);
+      overflow-x: auto;
+    }
+    .row {
+      min-width: 1050px;
+      display: grid;
+      grid-template-columns: 2.4fr .8fr 1fr 1.6fr 1.15fr 1.15fr 1.4fr;
+      gap: 14px;
+      align-items: center;
+      padding: 13px 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    .header {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .name-btn {
+      border: 0;
+      background: transparent;
+      padding: 0;
+      color: var(--text);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: left;
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+    }
+    .name-btn:hover { text-decoration: underline; }
+    .caret {
+      width: 14px;
+      display: inline-block;
+      color: var(--muted);
+      transition: transform .15s ease;
+    }
+    .item.open .caret { transform: rotate(90deg); }
+    .tag {
+      display: inline-block;
+      margin-right: 5px;
+      color: #333;
+    }
+    .state { font-weight: 700; }
+    .state.open { color: var(--open); }
+    .state.soon { color: var(--soon); }
+    .state.closed { color: var(--closed); }
+    .state.unknown { color: var(--unknown); }
+    .details {
+      display: none;
+      min-width: 1050px;
+      padding: 16px 29px 18px;
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+      color: #222;
+      line-height: 1.65;
+    }
+    .item.open .details { display: block; }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(180px, 1fr));
+      gap: 12px 28px;
+    }
+    .detail-label {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .links a {
+      color: #111;
+      margin-right: 14px;
+      text-underline-offset: 3px;
+    }
+    @media (max-width: 700px) {
+      main { width: min(100% - 20px, 1400px); margin-top: 18px; }
+      .detail-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Camp & Competition List</h1>
+  <p class="sub">Engineering • Computer • AI • Robotics • Hackathon</p>
+
+  <div class="table-wrap">
+    <div class="row header">
+      <div>NAME</div><div>ผู้จัด</div><div>TYPE</div><div>สาย</div>
+      <div>Open date</div><div>Last submit</div><div>State</div>
+    </div>
+
+    <div id="list"></div>
+  </div>
+</main>
+
+<script>
+const items = [
+  {
+    name: "BangMod Hackathon 2026",
+    organizer: "KMUTT",
+    type: "Hackathon",
+    fields: "Engi, Com, Software",
+    open: "1 Sep 2026",
+    close: "20 Sep 2026",
+    state: "Close in 5 days",
+    stateClass: "soon",
+    description: "การแข่งขันด้าน C/C++ และ Problem Solving สำหรับนักเรียนมัธยมปลาย",
+    eligible: "ม.4–ม.6 / ปวช.",
+    eventDate: "27 Sep 2026 (Online), 9 Nov 2026 (Onsite)",
+    team: "2–3 คน",
+    cost: "Free",
+    source: "Instagram @bangmodhack.kmutt, CampHUB",
+    official: "BangMod Hackathon / CPE KMUTT",
+    checked: "15 Sep 2026"
+  },
+  {
+    name: "LarnGear 26",
+    organizer: "CU",
+    type: "Camp",
+    fields: "Engi",
+    open: "5 Sep 2026",
+    close: "16 Sep 2026",
+    state: "Close in 1 day",
+    stateClass: "soon",
+    description: "ค่ายใหญ่ของคณะวิศวกรรมศาสตร์ จุฬาฯ สำหรับสำรวจหลายสาขาวิศวกรรม",
+    eligible: "ม.4–ม.5 / ปวช.1–2",
+    eventDate: "22–25 Dec 2026",
+    team: "Individual",
+    cost: "750 THB",
+    source: "LarnGear website, CampHUB",
+    official: "LarnGear / Chula Engineering",
+    checked: "15 Sep 2026"
+  },
+  {
+    name: "IIC 2027",
+    organizer: "CU",
+    type: "Competition",
+    fields: "Engi, Innovation, Com, Robotics",
+    open: "Unknown",
+    close: "Unknown",
+    state: "Not open yet",
+    stateClass: "unknown",
+    description: "Intania Innovation Contest — โครงการแข่งขันและพัฒนาโปรเจกต์ด้านวิศวกรรมและนวัตกรรม",
+    eligible: "High school — waiting for 2027 rules",
+    eventDate: "Unknown",
+    team: "Unknown",
+    cost: "Unknown",
+    source: "IIC / Intania channels",
+    official: "Intania Innovation Contest",
+    checked: "15 Sep 2026"
+  },
+  {
+    name: "Dongtan Camp 22",
+    organizer: "KU",
+    type: "Camp",
+    fields: "Engi",
+    open: "Unknown",
+    close: "Unknown",
+    state: "Not announced",
+    stateClass: "unknown",
+    description: "ค่ายใหญ่ของคณะวิศวกรรมศาสตร์ มหาวิทยาลัยเกษตรศาสตร์ บางเขน",
+    eligible: "Waiting for announcement",
+    eventDate: "Unknown",
+    team: "Individual",
+    cost: "Unknown",
+    source: "Dongtan Camp channels / KU Engineering",
+    official: "Dongtan Camp",
+    checked: "15 Sep 2026"
+  },
+  {
+    name: "Fun with Mechanics",
+    organizer: "CMKL",
+    type: "Camp",
+    fields: "Engi, Robotics, Mechanical",
+    open: "Open",
+    close: "Unknown",
+    state: "Open",
+    stateClass: "open",
+    description: "Hands-on mechanics, CAD, prototyping และ robotics-focused workshop",
+    eligible: "High school",
+    eventDate: "24 & 31 Oct 2026",
+    team: "Individual",
+    cost: "See official page",
+    source: "CMKL AI Ascend",
+    official: "CMKL AI Ascend",
+    checked: "15 Sep 2026"
+  },
+  {
+    name: "KORAT WELL-BEING HACK 2026",
+    organizer: "SUT",
+    type: "Hackathon",
+    fields: "Engi, AI, Innovation, Business",
+    open: "Open",
+    close: "28 Sep 2026",
+    state: "Close in 13 days",
+    stateClass: "open",
+    description: "Hackathon พัฒนา prototype และ pitch ไอเดียด้านเทคโนโลยีและนวัตกรรม",
+    eligible: "Age 15–22",
+    eventDate: "Oct 2026",
+    team: "4–6 คน",
+    cost: "Free",
+    source: "Official event site, competition listings",
+    official: "KORAT WELL-BEING HACK",
+    checked: "15 Sep 2026"
+  },
+  {
+    name: "Khanknot 25",
+    organizer: "MU",
+    type: "Camp",
+    fields: "Engi",
+    open: "16 Feb 2026",
+    close: "19 Mar 2026",
+    state: "Closed",
+    stateClass: "closed",
+    description: "ค่ายอยากเป็นวิศวกรของคณะวิศวกรรมศาสตร์ มหิดล",
+    eligible: "High school",
+    eventDate: "14–17 May 2026",
+    team: "Individual",
+    cost: "See archived announcement",
+    source: "CampHUB / Mahidol Engineering channels",
+    official: "Khanknot",
+    checked: "15 Sep 2026"
+  }
+];
+
+function escapeHtml(v) {
+  return String(v).replace(/[&<>"']/g, ch => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"
+  }[ch]));
+}
+
+const list = document.getElementById("list");
+
+items.forEach((x, index) => {
+  const wrapper = document.createElement("div");
+  wrapper.className = "item";
+  wrapper.innerHTML = `
+    <div class="row">
+      <div>
+        <button class="name-btn" aria-expanded="false">
+          <span class="caret">›</span>
+          <span>${escapeHtml(x.name)}</span>
+        </button>
+      </div>
+      <div>${escapeHtml(x.organizer)}</div>
+      <div>${escapeHtml(x.type)}</div>
+      <div>${escapeHtml(x.fields)}</div>
+      <div>${escapeHtml(x.open)}</div>
+      <div>${escapeHtml(x.close)}</div>
+      <div class="state ${escapeHtml(x.stateClass)}">${escapeHtml(x.state)}</div>
+    </div>
+
+    <div class="details">
+      <div class="detail-grid">
+        <div><span class="detail-label">Description</span>${escapeHtml(x.description)}</div>
+        <div><span class="detail-label">Eligible</span>${escapeHtml(x.eligible)}</div>
+        <div><span class="detail-label">Event date</span>${escapeHtml(x.eventDate)}</div>
+        <div><span class="detail-label">Team</span>${escapeHtml(x.team)}</div>
+        <div><span class="detail-label">Cost</span>${escapeHtml(x.cost)}</div>
+        <div><span class="detail-label">Found from</span>${escapeHtml(x.source)}</div>
+        <div><span class="detail-label">Official source</span>${escapeHtml(x.official)}</div>
+        <div><span class="detail-label">Last checked</span>${escapeHtml(x.checked)}</div>
+      </div>
+    </div>
+  `;
+  const btn = wrapper.querySelector(".name-btn");
+  btn.addEventListener("click", () => {
+    const isOpen = wrapper.classList.toggle("open");
+    btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+  list.appendChild(wrapper);
+});
+</script>
+</body>
+</html>
