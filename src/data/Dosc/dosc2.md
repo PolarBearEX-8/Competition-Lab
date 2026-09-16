@@ -2,6 +2,17 @@
 
 > Goal: ให้ AI ค้นหาและรวบรวม “กิจกรรมที่สมัครได้” สำหรับนักเรียนมัธยม โดยเน้น Engineering, Computer, AI, Robotics, Hackathon, Innovation, Med, Game, Science และ Business
 
+## Latest verified discoveries — 16 Sep 2026
+
+These are already added to `src/data/camps.ts`; retain them as a deduplication reference for future searches.
+
+| Name | Organizer | Type | Field | Deadline | Primary source |
+| --- | --- | --- | --- | --- | --- |
+| AI Camp 2026 รุ่นที่ 14 | Data Science and Engineering Center, KKU | Camp | AI, Com, Software, Data | 25 Sep 2026 | https://www.camphub.in.th/kku-ai-camp-2026/ · https://forms.gle/if3X9ByJqMbe8DPt8 |
+| GREEN & MED TECH INNOVATION รุ่นที่ 2 | KMUTNB Faculty of Technical Education | Innovation Challenge | Innovation, Med, Environment, Design | 20 Sep 2026 | https://kmutnb.link/npKaAv · https://www.camphub.in.th/green-med-tech-innovation-2/ |
+
+Both listings were checked against the organizer-linked registration path and CampHUB on 16 Sep 2026. Do not create duplicate listings under shortened or translated names.
+
 # Output Format
 
 ทุกกิจกรรมให้เก็บข้อมูลรูปแบบนี้:
