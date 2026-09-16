@@ -10,6 +10,7 @@ These are already added to `src/data/camps.ts`; retain them as a deduplication r
 | --- | --- | --- | --- | --- | --- |
 | AI Camp 2026 รุ่นที่ 14 | Data Science and Engineering Center, KKU | Camp | AI, Com, Software, Data | 25 Sep 2026 | https://www.camphub.in.th/kku-ai-camp-2026/ · https://forms.gle/if3X9ByJqMbe8DPt8 |
 | GREEN & MED TECH INNOVATION รุ่นที่ 2 | KMUTNB Faculty of Technical Education | Innovation Challenge | Innovation, Med, Environment, Design | 20 Sep 2026 | https://kmutnb.link/npKaAv · https://www.camphub.in.th/green-med-tech-innovation-2/ |
+| COMM-HACK ครั้งที่ 1 | Department of Telecommunications Engineering, KMITL | Hackathon | Engi, Telecom, Electrical, Embedded | 30 Sep 2026 | https://www.instagram.com/commhack.kmitl/ · https://www.telecom.kmitl.ac.th/2026/09/07/comm-hack-%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88-1-%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%AD%E0%B8%87/ |
 
 Both listings were checked against the organizer-linked registration path and CampHUB on 16 Sep 2026. Do not create duplicate listings under shortened or translated names.
 
