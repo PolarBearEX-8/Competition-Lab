@@ -13,6 +13,12 @@ These are already added to `src/data/camps.ts`; retain them as a deduplication r
 | COMM-HACK ครั้งที่ 1 | Department of Telecommunications Engineering, KMITL | Hackathon | Engi, Telecom, Electrical, Embedded | 30 Sep 2026 | https://www.instagram.com/commhack.kmitl/ · https://www.telecom.kmitl.ac.th/2026/09/07/comm-hack-%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88-1-%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%AD%E0%B8%87/ |
 | ESD CAMP ครั้งที่ 3 | Faculty of Engineering, Chulalongkorn University | Camp | Engi | 25 Sep 2026 | https://www.instagram.com/esdcamp.intania/ · https://www.camphub.in.th/esd-camp/ |
 | ค่ายสานฝันฉันอยากเป็นครู ครั้งที่ 23 | Faculty of Education, Khon Kaen University | Camp | Education, Social Science | 23 Sep 2026 | https://sanfuncampedkku.com/ · https://www.camphub.in.th/san-fun-camp-23/ |
+| Molecular Forensics | MedCoach Institute | Workshop | Science, Med, BioMed | 18 Sep 2026 | https://www.instagram.com/medcoach_thailand/ · https://forms.gle/ExaQfnywhBhvPmTW6 |
+| Suturing Technique Workshop | 4DXmedcamp | Workshop | Med, Science | 19 Sep 2026 | https://lin.ee/JHCzerB · https://www.camphub.in.th/saturing-technique-workshop/ |
+| CREW CAMP 2026 | โครงการวัยรุ่นมีของ Find Your Future | Camp | Business, Design, Media | 22 Sep 2026 | https://www.instagram.com/showmeugotthailand/ · https://showmeugot.com/activity |
+| VetQuiz KKU 2026 | Veterinary Student Club, KKU | Competition | Med, Science, BioMed | 26 Sep 2026 | https://www.instagram.com/smovetkku/ · https://www.camphub.in.th/vetquiz-kku-2026/ |
+| CUVETquizzes ครั้งที่ 5 | Faculty of Veterinary Science, Chulalongkorn University | Competition | Med, Science, BioMed | 28 Sep 2026 | https://www.instagram.com/cuvetquizzes/ · https://forms.gle/Xk3DZRftzVHcNJxB9 |
+| SUBIQ 2026 | Medical Student Club, Siam University | Competition | Med, Science, BioMed | 30 Sep 2026 | https://www.camphub.in.th/subiq-medical-biology-quiz-4/ |
 
 Both listings were checked against the organizer-linked registration path and CampHUB on 16 Sep 2026. Do not create duplicate listings under shortened or translated names.
 
