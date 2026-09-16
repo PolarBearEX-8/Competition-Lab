@@ -19,6 +19,10 @@ These are already added to `src/data/camps.ts`; retain them as a deduplication r
 | VetQuiz KKU 2026 | Veterinary Student Club, KKU | Competition | Med, Science, BioMed | 26 Sep 2026 | https://www.instagram.com/smovetkku/ · https://www.camphub.in.th/vetquiz-kku-2026/ |
 | CUVETquizzes ครั้งที่ 5 | Faculty of Veterinary Science, Chulalongkorn University | Competition | Med, Science, BioMed | 28 Sep 2026 | https://www.instagram.com/cuvetquizzes/ · https://forms.gle/Xk3DZRftzVHcNJxB9 |
 | SUBIQ 2026 | Medical Student Club, Siam University | Competition | Med, Science, BioMed | 30 Sep 2026 | https://www.camphub.in.th/subiq-medical-biology-quiz-4/ |
+| CLMC 2026 | Thai-Canadian Alumni Association / Canadian Mathematical Society | Competition | Science, Mathematics | 17 Sep 2026 | https://www.canadianmathtcaa.com/th · https://forms.gle/twDinZhnVh8ZdEe17 |
+| COMC 2026 | Thai-Canadian Alumni Association / Canadian Mathematical Society | Competition | Science, Mathematics | 15 Oct 2026 | https://www.canadianmathtcaa.com/th · https://forms.gle/oi9rKHDVF6owXs2E6 |
+| ค่ายทันตแพทย์ Dental Workshop | MST MED Institute | Workshop | Med, Science | 19 Sep 2026 | https://www.camphub.in.th/mstmed-dental-workshop-sep2026/ |
+| ค่ายสันฯ สร้างศาสตร์ศิลป์ เยือนถิ่นแปดริ้ว | Thammasat University Recreation Division | Camp | Social Science, Culture, Volunteering | 18 Sep 2026 | https://www.camphub.in.th/tu-recreation-camp-chachoengsao/ |
 
 Both listings were checked against the organizer-linked registration path and CampHUB on 16 Sep 2026. Do not create duplicate listings under shortened or translated names.
 
