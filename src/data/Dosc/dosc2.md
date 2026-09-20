@@ -2,7 +2,7 @@
 
 > Goal: ให้ AI ค้นหาและรวบรวม “กิจกรรมที่สมัครได้” สำหรับนักเรียนมัธยม โดยเน้น Engineering, Computer, AI, Robotics, Hackathon, Innovation, Med, Game, Science และ Business
 
-## Latest verified discoveries — 16 Sep 2026
+## Latest verified discoveries — 20 Sep 2026
 
 These are already added to `src/data/camps.ts`; retain them as a deduplication reference for future searches.
 
@@ -23,8 +23,11 @@ These are already added to `src/data/camps.ts`; retain them as a deduplication r
 | COMC 2026 | Thai-Canadian Alumni Association / Canadian Mathematical Society | Competition | Science, Mathematics | 15 Oct 2026 | https://www.canadianmathtcaa.com/th · https://forms.gle/oi9rKHDVF6owXs2E6 |
 | ค่ายทันตแพทย์ Dental Workshop | MST MED Institute | Workshop | Med, Science | 19 Sep 2026 | https://www.camphub.in.th/mstmed-dental-workshop-sep2026/ |
 | ค่ายสันฯ สร้างศาสตร์ศิลป์ เยือนถิ่นแปดริ้ว | Thammasat University Recreation Division | Camp | Social Science, Culture, Volunteering | 18 Sep 2026 | https://www.camphub.in.th/tu-recreation-camp-chachoengsao/ |
+| Thailand Youth Creative Writing Competition 2026 | Thai Youth / Thailand Post | Competition | English, Writing, Social Impact | 25 Sep 2026 | https://thaiyouthcwc.com/ · https://www.camphub.in.th/thailand-youth-creative-writing-competition-2026/ |
+| ค่ายโอลิมปิกวิชาการ สวช. ภาคคณิตศาสตร์ประยุกต์ 2569 | มูลนิธิโครงการสอบวัดทักษะวิชาการและโอลิมปิกนานาชาติ | Competition / Camp | Science, Mathematics | 24 Sep 2026 | https://forms.gle/ZFiLxrdQveePuGir7 · https://www.camphub.in.th/nat-academic-olympiad-applied-math-camp-2026/ |
+| ToBeIT'70@KMITL | Faculty of Information Technology, KMITL | Camp / Workshop | Com, Software, IT, Hackathon | Unknown (opened 14 Sep 2026) | https://tobeit.it.kmitl.ac.th/ |
 
-Both listings were checked against the organizer-linked registration path and CampHUB on 16 Sep 2026. Do not create duplicate listings under shortened or translated names.
+The new listings were checked against the organizer-linked registration path and CampHUB on 20 Sep 2026. They are useful high-school competition options; the applied-mathematics programme is private and not affiliated with POSN (สอวน.). ToBeIT'70@KMITL is an active 2026 listing; use its official site as the authoritative source because its current registration and timeline supersede the separate September Open House information. Do not create duplicate listings under shortened or translated names.
 
 # Output Format
 
