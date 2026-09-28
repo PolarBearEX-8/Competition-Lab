@@ -1,5 +1,32 @@
 # dosc2.md — AI Search Instructions
 
+## กติกาปัจจุบัน — 28 Sep 2026
+
+อ่าน [research-2026-09-28.md](./research-2026-09-28.md) สำหรับ 5 รายการใหม่และข้อจำกัด ตรวจทั้ง `src/data/camps.ts` และ `src/data/competitions.ts` ก่อนเพิ่มซ้ำ
+
+- หน้าหลักเริ่มจากเฉพาะงานแข่งขัน ค้นชื่อผู้จัด/มหาวิทยาลัยได้ และปิดตัวกรองเพื่อดูค่าย
+- `watch` หมายถึงยังยืนยันสถานะไม่ได้ ไม่ใช่ยืนยันว่าจะเปิดในอนาคต
+- ใช้ `open` เมื่อมีประกาศเปิดรับจากผู้จัดหรือหลักฐานการรับสมัครที่ตรวจสอบได้ ไม่อาศัยเพียงวันปิดในอนาคต
+- แยกระดับมัธยมและมหาวิทยาลัย หากไม่ระบุอายุให้เขียน Unknown ไม่ตีความว่านักเรียนทุกคนสมัครได้
+- เก็บรายการติดตามด้วยชื่อกิจกรรมที่ยืนยันได้ ห้ามสร้างเลขรุ่นหรือปีใหม่จากการคาดเดา กติกานี้ใช้แทนตัวอย่างปีคาดการณ์ด้านล่าง
+- ลิงก์ร่วมไม่ใช่หลักฐานว่าเป็นงานเดียวกันเสมอ: UTCC BUSINESS WAR กับ Trading ใช้ฟอร์มเดียวกันแต่กติกาต่างกัน
+- บันทึกวันที่อ่านแหล่งข้อมูลจริง ไม่ปรับ checked ของงานเดิมเพียงเพราะ deploy เว็บใหม่
+
+## Verified additions — 25 Sep 2026
+
+เพิ่มแล้วใน `src/data/camps.ts`; ตรวจชื่อ/ผู้จัด/รุ่นก่อนเพิ่มซ้ำ:
+
+| Name | Organizer | Type | Deadline | Evidence |
+| --- | --- | --- | --- | --- |
+| รังสิตวิชาการ ’69 | Rangsit University | Competition | 30 Sep 2026 | https://vichakan.rsu.ac.th/ · https://www.camphub.in.th/rangsit-vichakan-69/ |
+| 2nd SMISD Masterclass | Chulalongkorn University | Workshop + innovation contest | 30 Sep 2026 | https://www.camphub.in.th/smisd-masterclass-2-chula-materials/ |
+| TSE Training Program: MIT #5 | Thammasat University | Robotics workshop | 18 Oct 2026 | https://www.camphub.in.th/tse-training-program-modern-information-technology-mit/ |
+| Arduino Bootcamp 2026 | DevCommu / CEDT Chulalongkorn University | Bootcamp | 2 Oct 2026 | https://www.camphub.in.th/arduino-bootcamp-2026-devcommu-cedt/ |
+
+ค้นรอบถัดไปโดยเริ่มจากการแข่งขันและค่ายวิศวกรรมของมหาวิทยาลัยไทย ตรวจประกาศล่าสุดของผู้จัดก่อนเว็บรวมกิจกรรมเสมอ ตัวอย่างความขัดแย้ง: หน้า Korat Well-Being Hack ของผู้จัดระบุปิดสมัคร 28 Sep 2026 เวลา 23:59 ขณะที่ PorTCAS แสดงวันที่ภายหลัง; ใช้วันที่บนหน้าผู้จัด ห้ามใช้วันแข่งขันแทนวันปิดสมัคร และห้ามระบุ Open จากวันปิดที่ยังไม่ผ่านเพียงอย่างเดียวหากมีประกาศเต็มจำนวน/ปิดฟอร์ม
+
+ในข้อมูลแอปให้ใช้ `openAt`/`closeAt` เป็น ISO 8601 พร้อม `+07:00` เฉพาะเมื่อแหล่งระบุวันชัดเจน ช่องว่างที่ยังไม่ทราบใช้ `Unknown`; `registrationState: 'watch'` เมื่อยืนยันไม่ได้ว่ายังเปิดรับ ใส่ `checked` เป็นวันที่ตรวจจริง และบันทึกข้อความขัดแย้งใน `notes` ห้ามสร้างรุ่นปี 2027 จากงานปี 2026 โดยไม่มีประกาศ
+
 > Goal: ให้ AI ค้นหาและรวบรวม “กิจกรรมที่สมัครได้” สำหรับนักเรียนมัธยม โดยเน้น Engineering, Computer, AI, Robotics, Hackathon, Innovation, Med, Game, Science และ Business
 
 ## Latest verified discoveries — 20 Sep 2026

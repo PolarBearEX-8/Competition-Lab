@@ -5,6 +5,7 @@ import './styles.css'
 const headers = ['Name', 'Organizer', 'Type', 'สาย', 'Open date', 'Last submit', 'State', 'Grade level']
 const HOUR = 60 * 60 * 1000
 const DAY = 24 * HOUR
+const isCompetition = (camp: Camp) => /competition|hackathon|challenge|olympiad|game jam/i.test(camp.type)
 
 type LiveState = { label: string; className: 'open' | 'soon' | 'closed' | 'unknown'; section: 'Open' | 'Upcoming' | 'Closed' }
 
@@ -18,9 +19,10 @@ export function getLiveState(camp: Camp, now: number): LiveState {
   const closes = camp.closeAt ? new Date(camp.closeAt).getTime() : undefined
 
   if (closes !== undefined && now > closes) return { label: 'Closed', className: 'closed', section: 'Closed' }
-  if (opens !== undefined && now < opens) return { label: countdown('Open', opens - now), className: 'unknown', section: 'Upcoming' }
-  if (camp.registrationState === 'watch' || camp.registrationState === 'upcoming') return { label: 'Not announced', className: 'unknown', section: 'Upcoming' }
   if (camp.registrationState === 'closed') return { label: 'Closed', className: 'closed', section: 'Closed' }
+  if (opens !== undefined && now < opens) return { label: countdown('Open', opens - now), className: 'unknown', section: 'Upcoming' }
+  if (camp.registrationState === 'watch') return { label: 'Needs verification', className: 'unknown', section: 'Upcoming' }
+  if (camp.registrationState === 'upcoming') return { label: 'Not open yet', className: 'unknown', section: 'Upcoming' }
   if (closes !== undefined) {
     const remaining = closes - now
     return { label: countdown('Close', remaining), className: remaining <= 7 * DAY ? 'soon' : 'open', section: 'Open' }
@@ -35,9 +37,9 @@ function ExternalLink({ href, children }: { href: string; children: ReactNode })
 function Details({ camp }: { camp: Camp }) {
   const details: [string, ReactNode][] = [
     ['Description', camp.description], ['Eligibility', camp.eligible], ['Event date', camp.eventDate], ['Location', camp.location],
-    ['Team size', camp.team], ['Cost', camp.cost], ['Prize', camp.prize], ['Apply', <ExternalLink href={camp.applyLink}>Apply / Registration</ExternalLink>],
+    ['Team size', camp.team], ['Cost', camp.cost], ['Prize', camp.prize], ['Apply', <ExternalLink href={camp.applyLink}>ตรวจสอบการสมัคร / Registration</ExternalLink>],
     ['Instagram', camp.instagram ? <ExternalLink href={camp.instagram}>Organizer Instagram</ExternalLink> : '—'],
-    ['Official website', <ExternalLink href={camp.officialWebsite}>Official information</ExternalLink>],
+    ['Source / Website', <ExternalLink href={camp.officialWebsite}>อ่านประกาศและแหล่งข้อมูล</ExternalLink>],
     ['Found from', camp.discoverySource], ['Last checked', camp.checked],
   ]
   if (camp.notes) details.push(['Notes', camp.notes])
@@ -64,6 +66,8 @@ function CampSection({ title, sectionCamps, now, expandedName, onToggle }: { tit
 export default function App() {
   const [expandedName, setExpandedName] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
+  const [query, setQuery] = useState('')
+  const [competitionsOnly, setCompetitionsOnly] = useState(true)
   const [now, setNow] = useState(() => Date.now())
 
   useEffect(() => {
@@ -80,17 +84,26 @@ export default function App() {
 
   const grouped: Record<LiveState['section'], Camp[]> = { Open: [], Upcoming: [], Closed: [] }
   for (const camp of camps) {
+    if (competitionsOnly && !isCompetition(camp)) continue
+    if (query.trim() && !`${camp.name} ${camp.organizer} ${camp.fields} ${camp.description} ${camp.location}`.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase())) continue
     const section = getLiveState(camp, now).section
     const closedAt = camp.closeAt ? new Date(camp.closeAt).getTime() : undefined
     if (section === 'Closed' && (closedAt === undefined || now - closedAt > 7 * DAY)) continue
     grouped[section].push(camp)
   }
+  for (const section of Object.values(grouped)) {
+    section.sort((a, b) => Number(isCompetition(b)) - Number(isCompetition(a)) || (a.closeAt ? Date.parse(a.closeAt) : Infinity) - (b.closeAt ? Date.parse(b.closeAt) : Infinity) || a.name.localeCompare(b.name, 'th'))
+  }
+  const resultCount = grouped.Open.length + grouped.Upcoming.length + grouped.Closed.length
 
   return <main>
-    <div className="title-row"><div><h1>Camp & Competition List</h1><p className="sub">Engineering • Computer • AI • Robotics • Hackathon • Science • Business</p><p className="updated">Last updated: 23 Sep 2026</p></div><aside className="sponsor" aria-label="Sponsor"><img src="./2b2t-th.png" alt="2b2t-th" /><div><span>Sponsored by</span><strong>2b2t-th</strong><p>IP: <button className="ip-copy" onClick={() => void copyIp()}>2b2t-th.org</button> · 1.21.11–26.2 {copied ? <b className="copied" role="status">Copied!</b> : null}</p></div></aside></div>
+    <div className="title-row"><div><h1>Camp & Competition List</h1><p className="sub">รวมงานแข่งขันและค่าย เน้นมหาวิทยาลัยไทย</p><p className="sub">Engineering • Computer • AI • Robotics • Hackathon • Science • Business</p><p className="updated">อัปเดตรายการ: 28 Sep 2026 · วันที่ตรวจสอบแต่ละงานอยู่ในรายละเอียด</p></div><aside className="sponsor" aria-label="Sponsor"><img src="./2b2t-th.png" alt="2b2t-th" /><div><span>Sponsored by</span><strong>2b2t-th</strong><p>IP: <button className="ip-copy" onClick={() => void copyIp()}>2b2t-th.org</button> · 1.21.11–26.2 {copied ? <b className="copied" role="status">Copied!</b> : null}</p></div></aside></div>
+    <div className="filters"><label className="search">ค้นหากิจกรรม / มหาวิทยาลัย<input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="เช่น มหิดล, UTCC, Robotics" /></label><label className="competition-filter"><input type="checkbox" checked={competitionsOnly} onChange={event => setCompetitionsOnly(event.target.checked)} />เฉพาะงานแข่งขัน / Hackathon</label><span role="status">{resultCount} รายการ</span></div>
+    <p className="sub">เรียงงานแข่งขันก่อน แล้วตามวันปิดรับสมัคร · ตรวจระดับชั้นและเงื่อนไขจากประกาศก่อนสมัคร</p>
+    {resultCount === 0 ? <p className="empty">ไม่พบรายการ ลองเปลี่ยนคำค้นหรือปิดตัวกรองงานแข่งขัน</p> : null}
     <div className="table-wrap" aria-label="Camp and competition list"><div className="row header">{headers.map(header => <div key={header}>{header}</div>)}</div>
       <CampSection title="Open" sectionCamps={grouped.Open} now={now} expandedName={expandedName} onToggle={toggle} />
-      <CampSection title="Upcoming" sectionCamps={grouped.Upcoming} now={now} expandedName={expandedName} onToggle={toggle} />
+      <CampSection title="Upcoming / รอตรวจสอบ" sectionCamps={grouped.Upcoming} now={now} expandedName={expandedName} onToggle={toggle} />
       <CampSection title="Closed" sectionCamps={grouped.Closed} now={now} expandedName={expandedName} onToggle={toggle} />
     </div>
   </main>

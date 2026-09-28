@@ -1,5 +1,24 @@
 # dosc1.md — Source List for Camp / Hackathon / Competition Search
 
+## แหล่งค้นเพิ่มเติม — 28 Sep 2026
+
+- [บันทึกผลค้นและข้อจำกัด](./research-2026-09-28.md)
+- CMKL งานแข่งขัน AI: https://www.cmkl.ac.th/news-events/can-you-make-ai-faster-while-using-less-energy
+- AIT SOM งานร่วมจัด: https://som.ait.ac.th/post/save-the-date-create-lasting-impact-hackathon-2026
+- UTCC BUSINESS WAR: https://www.camphub.in.th/utcc-business-school-academic-week-2026-business-war/
+- UTCC Trading: https://www.camphub.in.th/utcc-business-school-academic-week-2026-trading-competition/
+- Mahidol Pharmachallenge: https://www.camphub.in.th/4th-pharmachallenge/ และ https://www.instagram.com/pharmachallenge.official/
+
+CampHUB เป็นแหล่งรอง แม้ผู้จัดส่งข้อมูลเอง ต้องบอกเมื่อยังตรวจฟอร์มหรือประกาศต้นทางไม่ได้
+
+## รอบค้นหลัก: วิศวกรรมและมหาวิทยาลัยไทย (อัปเดต 25 Sep 2026)
+
+ไล่ประกาศของคณะวิศวกรรมศาสตร์และภาควิชาก่อน แล้วค่อยขยายไปค่าย/การแข่งขันสาขาอื่น ตรวจทั้งหน้าเว็บไซต์และช่องทางสมัครของผู้จัดในมหาวิทยาลัยต่อไปนี้: จุฬาฯ, มก., มจธ., สจล., มจพ., มหิดล, ธรรมศาสตร์/SIIT, มข., มช., ม.อ., มทส. และมหาวิทยาลัยไทยอื่น ๆ ที่มีประกาศใหม่ ห้ามตีความว่าใช้สถานที่ของมหาวิทยาลัยแล้วมหาวิทยาลัยเป็นผู้จัดโดยอัตโนมัติ
+
+ลำดับงานค้น: การแข่งขันวิศวกรรม/หุ่นยนต์/เขียนโปรแกรม/นวัตกรรม → hackathon → ค่ายและ bootcamp วิศวกรรม → workshop และ open house → สาขาอื่น ขยายผลจากชื่อกิจกรรมที่พบไปยังเว็บไซต์ผู้จัด กติกา ใบสมัคร และประกาศแก้ไขกำหนดการ
+
+แหล่งที่พบรายการใหม่รอบนี้: https://vichakan.rsu.ac.th/ · https://www.camphub.in.th/smisd-masterclass-2-chula-materials/ · https://www.camphub.in.th/tse-training-program-modern-information-technology-mit/ · https://www.camphub.in.th/konchobkon-11/ · https://www.camphub.in.th/arduino-bootcamp-2026-devcommu-cedt/ เว็บรวมกิจกรรมใช้เป็นเบาะแสและหลักฐานรองเมื่อเข้าแหล่งตรงไม่ได้
+
 > Purpose: ให้ AI ใช้ไฟล์นี้เป็นรายการแหล่งค้นหลัก สำหรับรวบรวมค่าย การแข่งขัน Hackathon, Engineering Camp, Coding, AI, Robotics, Med, Business, Game และกิจกรรม Portfolio สำหรับนักเรียนมัธยมในประเทศไทย
 
 ## Priority Order
