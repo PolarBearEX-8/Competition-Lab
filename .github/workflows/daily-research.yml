@@ -13,7 +13,7 @@ concurrency:
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:
@@ -30,6 +30,7 @@ jobs:
         run: node scripts/daily-research.mjs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
       - run: npm run build
       - name: Commit only validated data and evidence
         id: commit
