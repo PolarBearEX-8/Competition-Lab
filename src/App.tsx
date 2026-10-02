@@ -2,6 +2,18 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { camps, type Camp } from './data/camps'
 import './styles.css'
 
+const checkedDates = camps.map(camp => {
+  const value = camp.checked.trim()
+  // Both the existing English dates and the researcher's ISO dates are date-only.
+  const timestamp = /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? Date.parse(`${value}T12:00:00+07:00`)
+    : Date.parse(`${value} 12:00:00 GMT+0700`)
+  return timestamp
+}).filter(Number.isFinite)
+const latestUpdated = checkedDates.length
+  ? new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Bangkok' }).format(new Date(Math.max(...checkedDates)))
+  : 'Unknown'
+
 const headers = ['Name', 'Organizer', 'Type', 'สาย', 'Open date', 'Last submit', 'State', 'Grade level']
 const HOUR = 60 * 60 * 1000
 const DAY = 24 * HOUR
@@ -97,7 +109,7 @@ export default function App() {
   const resultCount = grouped.Open.length + grouped.Upcoming.length + grouped.Closed.length
 
   return <main>
-    <div className="title-row"><div><h1>Camp & Competition List</h1><p className="sub">รวมงานแข่งขันและค่าย เน้นมหาวิทยาลัยไทย</p><p className="sub">Engineering • Computer • AI • Robotics • Hackathon • Science • Business</p><p className="updated">อัปเดตรายการ: 28 Sep 2026 · วันที่ตรวจสอบแต่ละงานอยู่ในรายละเอียด</p></div><aside className="sponsor" aria-label="Sponsor"><img src="./2b2t-th.png" alt="2b2t-th" /><div><span>Sponsored by</span><strong>2b2t-th</strong><p>IP: <button className="ip-copy" onClick={() => void copyIp()}>2b2t-th.org</button> · 1.21.11–26.2 {copied ? <b className="copied" role="status">Copied!</b> : null}</p></div></aside></div>
+    <div className="title-row"><div><h1>Camp & Competition List</h1><p className="sub">รวมงานแข่งขันและค่าย เน้นมหาวิทยาลัยไทย</p><p className="sub">Engineering • Computer • AI • Robotics • Hackathon • Science • Business</p><p className="updated">อัปเดตรายการ: {latestUpdated} · วันที่ตรวจสอบแต่ละงานอยู่ในรายละเอียด</p></div><aside className="sponsor" aria-label="Sponsor"><img src="./2b2t-th.png" alt="2b2t-th" /><div><span>Sponsored by</span><strong>2b2t-th</strong><p>IP: <button className="ip-copy" onClick={() => void copyIp()}>2b2t-th.org</button> · 1.21.11–26.2 {copied ? <b className="copied" role="status">Copied!</b> : null}</p></div></aside></div>
     <div className="filters"><label className="search">ค้นหากิจกรรม / มหาวิทยาลัย<input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="เช่น มหิดล, UTCC, Robotics" /></label><label className="competition-filter"><input type="checkbox" checked={competitionsOnly} onChange={event => setCompetitionsOnly(event.target.checked)} />เฉพาะงานแข่งขัน / Hackathon</label><span role="status">{resultCount} รายการ</span></div>
     <p className="sub">เรียงงานแข่งขันก่อน แล้วตามวันปิดรับสมัคร · ตรวจระดับชั้นและเงื่อนไขจากประกาศก่อนสมัคร</p>
     {resultCount === 0 ? <p className="empty">ไม่พบรายการ ลองเปลี่ยนคำค้นหรือปิดตัวกรองงานแข่งขัน</p> : null}
