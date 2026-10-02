@@ -1,5 +1,9 @@
 # dosc2.md — AI Search Instructions
 
+## Expanded documentation — 3 Oct 2026
+
+อ่าน [ดัชนีคู่มือ](./README.md), [แหล่งค้นเพิ่ม](./source-directory.md), [ชุดคำค้น](./query-bank.md), [กติกาตรวจหลักฐาน](./verification.md) และ [แผนรอบรายวัน](./coverage-plan.md) ก่อนใช้งาน รายชื่อและตัวอย่างเดิมด้านล่างเป็น seed/ประวัติ ต้องตรวจประกาศปัจจุบันก่อนเผยแพร่ กติกา verification.md ใช้แทนตัวอย่างที่เดารุ่นปีถัดไปในเอกสารเก่า
+
 ## กติกาปัจจุบัน — 28 Sep 2026
 
 อ่าน [research-2026-09-28.md](./research-2026-09-28.md) สำหรับ 5 รายการใหม่และข้อจำกัด ตรวจทั้ง `src/data/camps.ts` และ `src/data/competitions.ts` ก่อนเพิ่มซ้ำ

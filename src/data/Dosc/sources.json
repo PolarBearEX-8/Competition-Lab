@@ -1,0 +1,452 @@
+[
+  {
+    "id": "source-01",
+    "name": "CU",
+    "domain": "chula.ac.th",
+    "keywords": "จุฬาลงกรณ์มหาวิทยาลัย",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-02",
+    "name": "CU Engineering",
+    "domain": "eng.chula.ac.th",
+    "keywords": "Intania CEDT ISE ICE CP",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-03",
+    "name": "KU",
+    "domain": "ku.ac.th",
+    "keywords": "มหาวิทยาลัยเกษตรศาสตร์",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-04",
+    "name": "KU Engineering",
+    "domain": "eng.ku.ac.th",
+    "keywords": "ดงตาล Mat-E คนชอบกล วิศวกรรม",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-05",
+    "name": "KU Sriracha",
+    "domain": "eng.src.ku.ac.th",
+    "keywords": "เกษตร ศรีราชา วิศวกรรม",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-06",
+    "name": "KMUTT",
+    "domain": "kmutt.ac.th",
+    "keywords": "มจธ บางมด",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-07",
+    "name": "KMUTT Engineering",
+    "domain": "eng.kmutt.ac.th",
+    "keywords": "ComCamp BangMod Hackathon วิศวกรรม",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-08",
+    "name": "KMUTT Computer",
+    "domain": "ce.kmutt.ac.th",
+    "keywords": "CPE แข่งขันเขียนโปรแกรม",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-09",
+    "name": "KMITL",
+    "domain": "kmitl.ac.th",
+    "keywords": "สจล ลาดกระบัง",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-10",
+    "name": "KMITL Engineering",
+    "domain": "engineer.kmitl.ac.th",
+    "keywords": "TUE FREE RAI BEAM CEL",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-11",
+    "name": "KMITL Telecom",
+    "domain": "telecom.kmitl.ac.th",
+    "keywords": "COMM-HACK โทรคมนาคม",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-12",
+    "name": "Mahidol",
+    "domain": "mahidol.ac.th",
+    "keywords": "มหาวิทยาลัยมหิดล",
+    "group": "Science",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-13",
+    "name": "Mahidol Engineering",
+    "domain": "eg.mahidol.ac.th",
+    "keywords": "MUIE ขันน็อต วิศวกรรม",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-14",
+    "name": "TU",
+    "domain": "tu.ac.th",
+    "keywords": "มหาวิทยาลัยธรรมศาสตร์",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-15",
+    "name": "TU Engineering",
+    "domain": "engineer.tu.ac.th",
+    "keywords": "TEP TEPE ค่ายวิศวกรรม",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-16",
+    "name": "SIIT",
+    "domain": "siit.tu.ac.th",
+    "keywords": "SIIT Insight Camp",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-17",
+    "name": "KMUTNB",
+    "domain": "kmutnb.ac.th",
+    "keywords": "มจพ พระจอมเกล้าพระนครเหนือ",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-18",
+    "name": "KMUTNB Engineering",
+    "domain": "eng.kmutnb.ac.th",
+    "keywords": "วิศวกรรม หุ่นยนต์ นวัตกรรม",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-19",
+    "name": "KKU",
+    "domain": "kku.ac.th",
+    "keywords": "มหาวิทยาลัยขอนแก่น",
+    "group": "Science",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-20",
+    "name": "KKU Engineering",
+    "domain": "en.kku.ac.th",
+    "keywords": "วิศวกรรม ขอนแก่น",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-21",
+    "name": "CMU",
+    "domain": "cmu.ac.th",
+    "keywords": "มหาวิทยาลัยเชียงใหม่",
+    "group": "Science",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-22",
+    "name": "CMU Engineering",
+    "domain": "eng.cmu.ac.th",
+    "keywords": "วิศวกรรม เชียงใหม่",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-23",
+    "name": "PSU",
+    "domain": "psu.ac.th",
+    "keywords": "มหาวิทยาลัยสงขลานครินทร์",
+    "group": "Science",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-24",
+    "name": "PSU Engineering",
+    "domain": "eng.psu.ac.th",
+    "keywords": "วิศวกรรม หาดใหญ่",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-25",
+    "name": "SUT",
+    "domain": "sut.ac.th",
+    "keywords": "มหาวิทยาลัยเทคโนโลยีสุรนารี",
+    "group": "Science",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-26",
+    "name": "SUT Engineering",
+    "domain": "eng.sut.ac.th",
+    "keywords": "วิศวกรรม โคราช",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-27",
+    "name": "CMKL",
+    "domain": "cmkl.ac.th",
+    "keywords": "Ascend AI Innovator Hackathon",
+    "group": "Engineering",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-28",
+    "name": "RSU Academic",
+    "domain": "vichakan.rsu.ac.th",
+    "keywords": "รังสิตวิชาการ",
+    "group": "Science",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-29",
+    "name": "Burapha",
+    "domain": "buu.ac.th",
+    "keywords": "มหาวิทยาลัยบูรพา ชลบุรี",
+    "group": "Regional",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-30",
+    "name": "Walailak",
+    "domain": "wu.ac.th",
+    "keywords": "มหาวิทยาลัยวลัยลักษณ์ นครศรีธรรมราช",
+    "group": "Regional",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-31",
+    "name": "Phayao",
+    "domain": "up.ac.th",
+    "keywords": "มหาวิทยาลัยพะเยา",
+    "group": "Regional",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-32",
+    "name": "NSTDA",
+    "domain": "nstda.or.th",
+    "keywords": "YSC NSC ประกวดโครงงาน",
+    "group": "National",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-33",
+    "name": "NECTEC",
+    "domain": "nectec.or.th",
+    "keywords": "ซอฟต์แวร์ IoT AI",
+    "group": "National",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-34",
+    "name": "NIA",
+    "domain": "nia.or.th",
+    "keywords": "นวัตกรรม Startup เยาวชน",
+    "group": "National",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-35",
+    "name": "depa",
+    "domain": "depa.or.th",
+    "keywords": "ดิจิทัล Coding เยาวชน",
+    "group": "National",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-36",
+    "name": "GISTDA",
+    "domain": "gistda.or.th",
+    "keywords": "อวกาศ CanSat ภูมิสารสนเทศ",
+    "group": "National",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-37",
+    "name": "CampHUB",
+    "domain": "camphub.in.th",
+    "keywords": "ค่าย ประกวด แข่งขัน มัธยม",
+    "group": "Discovery",
+    "role": "discovery",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-38",
+    "name": "PorTCAS",
+    "domain": "portcas.com",
+    "keywords": "ค่าย Portfolio แข่งขัน",
+    "group": "Discovery",
+    "role": "discovery",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-39",
+    "name": "TCASter",
+    "domain": "tcaster.net",
+    "keywords": "ค่าย กิจกรรม Portfolio",
+    "group": "Discovery",
+    "role": "discovery",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-40",
+    "name": "Devpost",
+    "domain": "devpost.com",
+    "keywords": "hackathon student online",
+    "group": "International",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-41",
+    "name": "MLH",
+    "domain": "mlh.io",
+    "keywords": "student hackathon age eligibility",
+    "group": "International",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-42",
+    "name": "lablab",
+    "domain": "lablab.ai",
+    "keywords": "AI hackathon",
+    "group": "International",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-43",
+    "name": "Kaggle",
+    "domain": "kaggle.com",
+    "keywords": "competition student eligibility",
+    "group": "International",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-44",
+    "name": "itch.io",
+    "domain": "itch.io",
+    "keywords": "game jam student",
+    "group": "International",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-45",
+    "name": "Global Game Jam",
+    "domain": "globalgamejam.org",
+    "keywords": "game jam Thailand",
+    "group": "International",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-46",
+    "name": "WRO",
+    "domain": "wro-association.org",
+    "keywords": "Thailand robotics age category",
+    "group": "Robotics",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-47",
+    "name": "FIRST",
+    "domain": "firstinspires.org",
+    "keywords": "robotics Thailand team age",
+    "group": "Robotics",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-48",
+    "name": "RoboCupJunior",
+    "domain": "junior.robocup.org",
+    "keywords": "Thailand robotics junior",
+    "group": "Robotics",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-49",
+    "name": "VEX Events",
+    "domain": "events.vex.com",
+    "keywords": "Thailand robotics high school",
+    "group": "Robotics",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  },
+  {
+    "id": "source-50",
+    "name": "NASA Space Apps",
+    "domain": "spaceappschallenge.org",
+    "keywords": "Thailand hackathon age",
+    "group": "International",
+    "role": "organizer-search-target",
+    "status": "search-target; verify latest event announcement before use"
+  }
+]

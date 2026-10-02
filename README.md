@@ -15,3 +15,7 @@ Search uses Tavily Search (basic depth, up to six queries per run) and requests 
 Records in `src/data/researched.json` overlay curated events by normalized name + organizer, preserving unrelated records. Evidence and queries are stored in `research/YYYY-MM-DD.json`; token usage is printed in workflow logs. Data validation and a successful build precede commit and deployment. Review reports for important deadlines/eligibility: source presence and schema checks do not guarantee factual accuracy.
 
 Local checks (Node.js 24): `npm ci`, `node --test scripts/daily-research.test.mjs`, `npm run build`. Set `GEMINI_API_KEY` through your secret manager before running `node scripts/daily-research.mjs`. Never commit API keys. Daily runs use three model requests; both AI free quotas and GitHub Actions limits apply.
+
+## Expanded research documentation
+
+See [src/data/Dosc/README.md](src/data/Dosc/README.md) for the source directory, 18 subject query groups, verification rules, decision examples, coverage rotation and operations guide. The daily planner now loads these documents and rotates four source targets from a 50-entry registry by calendar day. The verifier loads the evidence rules separately. Historical research files remain historical references, not evidence of current registration. Search budget stays at six queries per run; documentation expansion does not imply every source is checked daily.

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validate, mergeEvents, currentEvents, searchEvidence } from './daily-research.mjs';
+import { validate, mergeEvents, currentEvents, searchEvidence, rotateSources, researchDocs } from './daily-research.mjs';
 const record = Object.fromEntries('name organizer type fields open close gradeLevel description eligible eventDate location team cost prize discoverySource checked'.split(' ').map(k => [k, 'Unknown']));
 Object.assign(record, { name: 'Camp 2026', organizer: 'CU', registrationState: 'watch', applyLink: 'https://example.org/apply', officialWebsite: 'https://example.org/event' });
 test('invalid URLs, states, dates and extra properties cannot be published', () => {
@@ -33,4 +33,22 @@ test('search evidence distinguishes snippets from retrieved pages and rejects in
   assert.equal(records[0].pageText, 'Page text');
   assert.equal(records[1].pageText, undefined);
   assert.throws(() => searchEvidence({}, 'query'));
+});
+
+test('source rotation crosses month boundaries without resetting and handles short registries', () => {
+  const sources = Array.from({ length: 11 }, (_, id) => ({ id }));
+  const a = rotateSources(sources, '2026-09-30');
+  const b = rotateSources(sources, '2026-10-01');
+  assert.equal(a.length, 4);
+  assert.equal(b[0].id, (a[0].id + 4) % 11);
+  assert.equal(rotateSources(sources.slice(0, 2), '2026-10-03').length, 2);
+  assert.throws(() => rotateSources([], '2026-10-03'));
+});
+test('daily prompts load expanded documentation and concrete source targets', async () => {
+  const docs = await researchDocs('2026-10-03');
+  assert.ok(docs.planner.includes('Cybersecurity'));
+  assert.ok(docs.planner.includes('Today'));
+  assert.ok(docs.planner.includes('domain'));
+  assert.ok(docs.verifier.includes('Verification contract'));
+  assert.ok(docs.verifier.includes('Unknown'));
 });
